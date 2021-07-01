@@ -27,8 +27,8 @@
   "scripts": {
     "test": "test",
     "build": "webpack --config webpack/base.js ",
-    "start": "node server.js",
-    "start:dev": "webpack-dev-server"
+    "start:node": "node server.js",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
