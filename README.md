@@ -98,4 +98,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://github.com/happiguru/Game-JavaScript/blob/4bf5acfdd1b9df7bdc841b1665f9864a6dd6b88d/LICENSE) licensed.
