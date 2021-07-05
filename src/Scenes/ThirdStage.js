@@ -12,9 +12,9 @@ import {
   ChaserShip,
   GunShip,
   CarrierShip,
-} from '../entities';
+} from '../entities.js';
 
-const Storage = require('../modules/storage');
+const Storage = require('../modules/storage.js');
 
 let timer;
 let score = Storage.getCurrentScore();
@@ -224,7 +224,6 @@ export default class ThirdStage extends Phaser.Scene {
     }
     return arr;
   }
-
 
   update() {
     const lasthigh = Storage.getHighScore();

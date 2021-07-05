@@ -2,12 +2,11 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-use-before-define */
 
-
 import 'phaser';
-import config from '../Config/config';
+import config from '../Config/config.js';
 
-const SubmitScore = require('../modules/submitScore');
-const Storage = require('../modules/storage');
+const SubmitScore = require('../modules/submitScore.js');
+const Storage = require('../modules/storage.js');
 
 const zero = 0;
 

@@ -6,7 +6,7 @@
 /* eslint-disable no-unused-vars */
 
 let ammunition = 100;
-const Storage = require('./modules/storage');
+const Storage = require('./modules/storage.js');
 
 export class Entity extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, key, type) {

@@ -3,9 +3,9 @@
 /* eslint-disable no-nested-ternary */
 
 import 'phaser';
-import config from '../Config/config';
+import config from '../Config/config.js';
 
-const GetScore = require('../modules/getScore');
+const GetScore = require('../modules/getScore.js');
 
 let allScores;
 
