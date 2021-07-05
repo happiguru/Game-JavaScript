@@ -34,9 +34,6 @@
 - MOVE RIGHT: Press [D] key
 - SHOOT LASER: Press [SPACEBAR] key
 
-![screenshot](./src/assets/img3.png)
-
-
 ## Prerequisites
 - NPM package and JavaScript knowledge.
 
