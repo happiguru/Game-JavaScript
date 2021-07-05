@@ -4,7 +4,7 @@
 
 # Sky Shooter!
 
-> This projects consists of a Javascript Platform Game built with Phaser 3, as aked for in the Microverse Program.
+> This projects consists of a Javascript Shooter Game built with Phaser 3, as aked for in the Microverse Program.
 
 ![screenshot](./g1.png)
 ![screenshot](./g2.png)
