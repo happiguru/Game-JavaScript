@@ -71,7 +71,7 @@ Open http://localhost:8000/ on your browser.
 
 - Github: [@happiguru](https://github.com/happiguru)
 - Twitter: [@Lekunze_Nley](https://twitter.com/Lekunze_Nley)
-- Linkedin: [lekunze-nley](https://www.linkedin.com/in/lekunze-nley/
+- Linkedin: [lekunze-nley](https://www.linkedin.com/in/lekunze-nley/)
 
 ## 🤝 Contributing
 
