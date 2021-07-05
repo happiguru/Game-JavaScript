@@ -2,43 +2,37 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-# Sky Climber!
+# Sky Shooter!
 
 > This projects consists of a Javascript Platform Game built with Phaser 3, as aked for in the Microverse Program.
 
-![screenshot](./src/assets/img1.png)
-![screenshot](./src/assets/img2.png)
-
-<!-- > *"I don't know anything about this Cyberpunk 2077 that is being released today... 'Twelve is Missing' is the epitome of gaming!" - IGN*
-
-> *"A delayed game is eventually good but a rushed game is forever bad, 'Twelve is Missing!' took as long as it needed" - Shigeru Miyamoto*
-
-> *"AA-OO" - Twelve Demanky* -->
-
+![screenshot](./g1.png)
+![screenshot](./g2.png)
 
 ## Live Demo
 
-<!-- [Live Demo Link](https://twelveismissing.herokuapp.com/) -->
-
+[Live Demo Link](https://phaserskyshooter.herokuapp.com/)
 ## Game Concept
 
-> Twelve Demanky got lost on one of his trips and now he needs to go back home. Plane tickets from Wroclaw do Rio de Janeiro are not cheap and he needs to make ends meet! 
+> Sky Shooter is the first game I have programmed. I picked my idea from simple Star wars game I use to watch my friends play when I was young. Little did I know that some day I will be a able to build a game for myself! 
 
 ## Main Objective
 
-> Collect 500 B$ to buy the plane ticket.
+> You have to shoot enemies to get more points and bullets.
+> When you destroy an enemy, you get rewarded with a point.
+> As a player, you can shoot down enemies using the keyboard "Spacebar".
 > Beat other players' highscores!
+> A players score is recorded locally in the browser and compared to the previous scores.
+> If a player score beats the previous score, then they automatically become the highest on the LeadersBoard.
 
 ## Game instructions:
 
 > Here you can find all the Game Instructions:
-- Move around with W,A,S,D;
-- You can double jump once while in the air;
-- Health item give you +10 of health;
-- Enemies take out -40 of health;
-- There are items that give you an extra jump midair once;
-- Once you get all the bananas, the other ones are reset and you can collect them again;
-- If you collect 50 bananas you can end up with the Congratulations Game Over.
+- MOVE UP: Press [W] key
+- MOVE DOWN: Press [S] key
+- MOVE LEFT: Press [A] key
+- MOVE RIGHT: Press [D] key
+- SHOOT LASER: Press [SPACEBAR] key
 
 ![screenshot](./src/assets/img3.png)
 
@@ -54,7 +48,7 @@ To get a local copy up and running follow these simple example steps.
 git clone https://github.com/happiguru/Game-JavaScript
 npm install
 npm run start
-Open http://localhost:3000/ on your browser.
+Open http://localhost:8000/ on your browser.
 ```
 ## Testing
 

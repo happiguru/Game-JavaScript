@@ -24,7 +24,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "npm run build && webpack serve --host=0.0.0.0 --port=$PORT"
+    "start": "npm run build && webpack serve"
   },
   "repository": {
     "type": "git",
@@ -56,9 +56,5 @@
     "stylelint-csstree-validator": "^1.8.0",
     "stylelint-scss": "^3.17.2",
     "webpack": "^5.0.0"
-  },
-
-  "engines": {
-    "node": "14.x"
   }
 }
