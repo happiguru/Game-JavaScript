@@ -27,5 +27,5 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true),
     }),
   ],
-
+  "heroku-run-build-script": true,
 };
