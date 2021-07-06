@@ -1,38 +1,48 @@
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
+    mode: 'development',
+    entry: './src/index.js',
 
-  entry: [
-    './src/index.js',
-  ],
-  output: {
-    path: path.resolve(__dirname, 'dist'),
- 
-    filename: 'bundle.js',
-  },
-
-  module: {
-    rules: [
-      {
-        test: [/\.vert$/, /\.frag$/],
-        use: 'raw-loader',
-      },
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-    ],
-  },
-
-  plugins: [
-    new webpack.DefinePlugin({
-      CANVAS_RENDERER: JSON.stringify(true),
-      WEBGL_RENDERER: JSON.stringify(true),
-    }),
-  ],
+    output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
+    module: {
+        rules: [
+          {
+            test: [/\.vert$/, /\.frag$/],
+            use: 'raw-loader',
+          },
+          {
+            test: /\.(ogg|mp3|wav|mpe?g)$/i,
+            loader: 'file-loader',
+            
+          },
+          {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+          },
+          {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset/resource',
+          }
+        ]
+    },
+    devtool: 'inline-source-map',
+    devServer: {
+      contentBase: './dist',
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Sky Shooter Game',
+      }),
+      new webpack.DefinePlugin({
+        CANVAS_RENDERER: JSON.stringify(true),
+        WEBGL_RENDERER: JSON.stringify(true),
+      }),
+    ]
 };

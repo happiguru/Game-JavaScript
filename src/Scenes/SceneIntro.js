@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 import 'phaser';
 
 export default class SceneIntro extends Phaser.Scene {

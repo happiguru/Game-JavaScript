@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable no-use-before-define */
-
 import 'phaser';
 import config from '../Config/config.js';
 

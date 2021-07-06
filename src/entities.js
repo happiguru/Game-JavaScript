@@ -1,10 +1,3 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable no-this-before-super */
-/* eslint-disable no-undef */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-unused-vars */
-
 let ammunition = 100;
 const Storage = require('./modules/storage.js');
 

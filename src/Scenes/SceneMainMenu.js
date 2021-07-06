@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */
-
 import 'phaser';
+import Background3 from '../assets/Background-3.png';
 
 export default class SceneMainMenu extends Phaser.Scene {
   constructor() {
@@ -10,7 +9,7 @@ export default class SceneMainMenu extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('deepspace-menu', 'assets/Background-3.png');
+    this.load.image('deepspace-menu', Background3);
   }
 
   create() {

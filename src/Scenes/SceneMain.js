@@ -1,10 +1,3 @@
-/* eslint-disable block-scoped-var */
-/* eslint-disable no-redeclare */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-undef */
-/* eslint-disable no-use-before-define */
-
 import 'phaser';
 import {
   Player,
@@ -13,6 +6,19 @@ import {
   GunShip,
   CarrierShip,
 } from '../entities.js';
+import BackgroundOne from '../assets/Background-1.png';
+import Explosion from '../assets/sprExplosion.png';
+import Enemy0 from '../assets/sprEnemy0.png';
+import Enemy1 from '../assets/sprEnemy1.png';
+import Enemy2 from '../assets/sprEnemy2.png';
+
+import LaserEnemy0 from '../assets/sprLaserEnemy0.png';
+import LaserPlayer from '../assets/sprLaserPlayer.png';
+import sprPlayer from '../assets/sprPlayer.png';
+
+import soundone from '../assets/sndExplode0.wav';
+import soundtwo from '../assets/sndExplode1.wav';
+import soundthree from '../assets/sndLaser.wav';
 
 const Storage = require('../modules/storage.js');
 
@@ -41,31 +47,31 @@ export default class SceneMain extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('deepspace', 'assets/Background-1.png');
+    this.load.image('deepspace', BackgroundOne);
 
-    this.load.spritesheet('sprExplosion', 'assets/sprExplosion.png', {
+    this.load.spritesheet('sprExplosion', Explosion, {
       frameWidth: 32,
       frameHeight: 32,
     });
-    this.load.spritesheet('sprEnemy0', 'assets/sprEnemy0.png', {
+    this.load.spritesheet('sprEnemy0', Enemy0, {
       frameWidth: 16,
       frameHeight: 16,
     });
-    this.load.image('sprEnemy1', 'assets/sprEnemy1.png');
-    this.load.spritesheet('sprEnemy2', 'assets/sprEnemy2.png', {
+    this.load.image('sprEnemy1', Enemy1);
+    this.load.spritesheet('sprEnemy2', Enemy2, {
       frameWidth: 16,
       frameHeight: 16,
     });
-    this.load.image('sprLaserEnemy0', 'assets/sprLaserEnemy0.png');
-    this.load.image('sprLaserPlayer', 'assets/sprLaserPlayer.png');
-    this.load.spritesheet('sprPlayer', 'assets/sprPlayer.png', {
+    this.load.image('sprLaserEnemy0', LaserEnemy0);
+    this.load.image('sprLaserPlayer', LaserPlayer);
+    this.load.spritesheet('sprPlayer', sprPlayer, {
       frameWidth: 16,
       frameHeight: 16,
     });
 
-    this.load.audio('sndExplode0', 'assets/sndExplode0.wav');
-    this.load.audio('sndExplode1', 'assets/sndExplode1.wav');
-    this.load.audio('sndLaser', 'assets/sndLaser.wav');
+    this.load.audio('sndExplode0', soundone);
+    this.load.audio('sndExplode1', soundtwo);
+    this.load.audio('sndLaser', soundthree);
   }
 
   create() {

@@ -1,10 +1,3 @@
-/* eslint-disable block-scoped-var */
-/* eslint-disable no-redeclare */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-undef */
-/* eslint-disable no-use-before-define */
-
 import 'phaser';
 import {
   Player,
@@ -13,7 +6,7 @@ import {
   GunShip,
   CarrierShip,
 } from '../entities.js';
-
+import Background4 from '../assets/Background-4.png';
 const Storage = require('../modules/storage.js');
 
 let timer;
@@ -40,7 +33,7 @@ export default class ThirdStage extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('deepspace-3', 'assets/Background-4.png');
+    this.load.image('deepspace-3', Background4);
   }
 
   create() {
