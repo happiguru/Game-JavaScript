@@ -24,7 +24,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "npm run build && webpack serve --port=$PORT --host=0.0.0.0 --disable-host-check"
+    "start": "npm run build && webpack serve --port=8000"
   },
   "repository": {
     "type": "git",
@@ -58,5 +58,7 @@
     "stylelint-scss": "^3.17.2",
     "webpack": "^5.0.0"
   },
-  "heroku-run-build-script": true
+  "engines": {
+    "node": "16.4.1"
+  }
 }
