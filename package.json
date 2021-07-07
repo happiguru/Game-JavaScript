@@ -36,8 +36,6 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "phaser": "^3.3.0",
-    "postcss": "^8.3.5",
-    "postcss-loader": "^6.1.1"
+    "phaser": "^3.3.0"
   }
 }
