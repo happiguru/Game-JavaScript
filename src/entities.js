@@ -2,6 +2,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-use-before-define */
 /* eslint-disable max-classes-per-file */
+/* eslint-disable no-unresolved */
 import Phaser from 'phaser';
 
 let ammunition = 100;

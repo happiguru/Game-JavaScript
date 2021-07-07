@@ -1,3 +1,4 @@
+/* eslint-disable no-unresolved */
 import Phaser from 'phaser';
 import Background3 from '../assets/Background-3.png';
 
