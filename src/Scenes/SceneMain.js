@@ -8,7 +8,7 @@ import {
   ChaserShip,
   GunShip,
   CarrierShip,
-} from '../entities.js';
+} from '../entities';
 import BackgroundOne from '../assets/Background-1.png';
 import Explosion from '../assets/sprExplosion.png';
 import Enemy0 from '../assets/sprEnemy0.png';
