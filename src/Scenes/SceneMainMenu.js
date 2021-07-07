@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import Background3 from '../assets/Background-3.png';
 
-export default class SceneMainMenu extends Phaser.Scene {
+class SceneMainMenu extends Phaser.Scene {
   constructor() {
     super({
       key: 'SceneMainMenu',
@@ -56,3 +56,5 @@ export default class SceneMainMenu extends Phaser.Scene {
     topBtn.onclick = () => this.scene.start('SceneTopScores');
   }
 }
+
+export default SceneMainMenu;

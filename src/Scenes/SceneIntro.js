@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-export default class SceneIntro extends Phaser.Scene {
+class SceneIntro extends Phaser.Scene {
   constructor() {
     super({
       key: 'SceneIntro',
@@ -62,3 +62,5 @@ export default class SceneIntro extends Phaser.Scene {
     btn.onclick = () => this.scene.start('SceneMain');
   }
 }
+
+export default SceneIntro;

@@ -1,14 +1,10 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-use-before-define */
 import Phaser from 'phaser';
-import {
-  Player,
-  PlayerLaser,
-  ChaserShip,
-  GunShip,
-  CarrierShip,
-} from '../entities';
+import Player from '../entities/player';
+import ChaserShip from '../entities/chaserShip';
+import GunShip from '../entities/gunShip';
+import CarrierShip from '../entities/carrierShip';
+import PlayerLaser from '../entities/laserPlayer';
 import BackgroundOne from '../assets/Background-1.png';
 import Explosion from '../assets/sprExplosion.png';
 import Enemy0 from '../assets/sprEnemy0.png';
@@ -29,8 +25,8 @@ let timer;
 let score = 0;
 let scoreText;
 let highText;
-let timerText;
 let stageText;
+let timerText;
 let ammoText;
 const zero = 0;
 let sec = 0;
@@ -42,7 +38,7 @@ if (highestScore === null) {
   Storage.highScore(zero);
 }
 
-export default class SceneMain extends Phaser.Scene {
+class SceneMain extends Phaser.Scene {
   constructor() {
     super({
       key: 'SceneMain',
@@ -214,6 +210,8 @@ export default class SceneMain extends Phaser.Scene {
       }
     });
 
+    const stopTimer = () => { clearInterval(timer); };
+
     this.physics.add.overlap(this.player, this.enemies, (player, enemy) => {
       if (!player.getData('isDead')
         && !enemy.getData('isDead')) {
@@ -241,21 +239,17 @@ export default class SceneMain extends Phaser.Scene {
     // Add timer
     timer = setInterval(() => {
       timerText.setText(`Time Left: ${sec}`);
-      sec--;
+      sec -= 1;
       if (sec < 0) {
         secondStage();
         stopTimer();
       }
     }, 1000);
-
-    function stopTimer() {
-      clearInterval(timer);
-    }
   }
 
   getEnemiesByType(type) {
     const arr = [];
-    for (let i = 0; i < this.enemies.getChildren().length; i++) {
+    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
       const enemy = this.enemies.getChildren()[i];
       if (enemy.getData('type') === type) {
         arr.push(enemy);
@@ -298,7 +292,7 @@ export default class SceneMain extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemies.getChildren().length; i++) {
+    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
       const enemy = this.enemies.getChildren()[i];
 
       enemy.update();
@@ -316,7 +310,7 @@ export default class SceneMain extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemyLasers.getChildren().length; i++) {
+    for (let i = 0; i < this.enemyLasers.getChildren().length; i += 1) {
       const laser = this.enemyLasers.getChildren()[i];
       laser.update();
       if (laser.x < -laser.displayWidth
@@ -329,7 +323,7 @@ export default class SceneMain extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.playerLasers.getChildren().length; i++) {
+    for (let i = 0; i < this.playerLasers.getChildren().length; i += 1) {
       const laser = this.playerLasers.getChildren()[i];
       laser.update();
       if (laser.x < -laser.displayWidth
@@ -343,3 +337,5 @@ export default class SceneMain extends Phaser.Scene {
     }
   }
 }
+
+export default SceneMain;

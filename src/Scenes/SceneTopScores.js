@@ -1,11 +1,10 @@
-/* eslint-disable no-nested-ternary */
 import Phaser from 'phaser';
 
 const GetScore = require('../modules/getScore');
 
 let allScores;
 
-export default class SceneTopScores extends Phaser.Scene {
+class SceneTopScores extends Phaser.Scene {
   constructor() {
     super({
       key: 'SceneTopScores',
@@ -50,6 +49,7 @@ export default class SceneTopScores extends Phaser.Scene {
   update() {
     allScores.then((response) => {
       const results = response.result;
+      // eslint-disable-next-line no-nested-ternary
       results.sort((a, b) => ((a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)));
       let height = 0.3;
       results.slice(0, 5).forEach((result) => {
@@ -65,3 +65,5 @@ export default class SceneTopScores extends Phaser.Scene {
     });
   }
 }
+
+export default SceneTopScores;

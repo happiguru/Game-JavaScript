@@ -1,14 +1,11 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-use-before-define */
 import Phaser from 'phaser';
-import {
-  Player,
-  PlayerLaser,
-  ChaserShip,
-  GunShip,
-  CarrierShip,
-} from '../entities';
+import Player from '../entities/player';
+import ChaserShip from '../entities/chaserShip';
+import GunShip from '../entities/gunShip';
+import CarrierShip from '../entities/carrierShip';
+import PlayerLaser from '../entities/laserPlayer';
+
 import Background2 from '../assets/Background-2.png';
 
 const Storage = require('../modules/storage');
@@ -29,7 +26,7 @@ if (highestScore === null) {
   Storage.highScore(zero);
 }
 
-export default class SecondStage extends Phaser.Scene {
+class SecondStage extends Phaser.Scene {
   constructor() {
     super({
       key: 'SecondStage',
@@ -174,6 +171,22 @@ export default class SecondStage extends Phaser.Scene {
       }
     });
 
+    const thirdStage = () => this.scene.start('ThirdStage');
+
+    sec = 60;
+    // Add timer
+    const timer = setInterval(() => {
+      timerText.setText(`Time Left: ${sec}`);
+      sec -= 1;
+      if (sec < 0) {
+        thirdStage();
+        // eslint-disable-next-line no-use-before-define
+        stopTimer();
+      }
+    }, 1000);
+
+    const stopTimer = () => { clearInterval(timer); };
+
     this.physics.add.overlap(this.player, this.enemies, (player, enemy) => {
       if (!player.getData('isDead')
         && !enemy.getData('isDead')) {
@@ -193,28 +206,11 @@ export default class SecondStage extends Phaser.Scene {
         stopTimer();
       }
     });
-
-    const thirdStage = () => this.scene.start('ThirdStage');
-
-    sec = 60;
-    // Add timer
-    const timer = setInterval(() => {
-      timerText.setText(`Time Left: ${sec}`);
-      sec--;
-      if (sec < 0) {
-        thirdStage();
-        stopTimer();
-      }
-    }, 1000);
-
-    function stopTimer() {
-      clearInterval(timer);
-    }
   }
 
   getEnemiesByType(type) {
     const arr = [];
-    for (let i = 0; i < this.enemies.getChildren().length; i++) {
+    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
       const enemy = this.enemies.getChildren()[i];
       if (enemy.getData('type') === type) {
         arr.push(enemy);
@@ -257,7 +253,7 @@ export default class SecondStage extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemies.getChildren().length; i++) {
+    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
       const enemy = this.enemies.getChildren()[i];
 
       enemy.update();
@@ -275,7 +271,7 @@ export default class SecondStage extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemyLasers.getChildren().length; i++) {
+    for (let i = 0; i < this.enemyLasers.getChildren().length; i += 1) {
       const laser = this.enemyLasers.getChildren()[i];
       laser.update();
       if (laser.x < -laser.displayWidth
@@ -288,7 +284,7 @@ export default class SecondStage extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.playerLasers.getChildren().length; i++) {
+    for (let i = 0; i < this.playerLasers.getChildren().length; i += 1) {
       const laser = this.playerLasers.getChildren()[i];
       laser.update();
       if (laser.x < -laser.displayWidth
@@ -302,3 +298,5 @@ export default class SecondStage extends Phaser.Scene {
     }
   }
 }
+
+export default SecondStage;

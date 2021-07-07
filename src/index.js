@@ -1,7 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-
-import 'phaser';
+import Phaser from 'phaser';
 import config from './Config/config';
 import SceneMain from './Scenes/SceneMain';
 import SceneMainMenu from './Scenes/SceneMainMenu';

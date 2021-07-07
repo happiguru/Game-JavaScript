@@ -1,14 +1,10 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable no-use-before-define */
 import Phaser from 'phaser';
 
 const SubmitScore = require('../modules/submitScore');
 const Storage = require('../modules/storage');
 
 const zero = 0;
-
-export default class SceneScores extends Phaser.Scene {
+class SceneScores extends Phaser.Scene {
   constructor() {
     super({
       key: 'SceneScores',
@@ -39,12 +35,11 @@ export default class SceneScores extends Phaser.Scene {
     Send Score</button>`;
     this.add.dom(this.game.config.width * 0.5, this.game.config.height * 0.6, div, 'background-color: transparent; width: 220px; height: 0; font: 48px Arial');
 
-    const btn = document.getElementById('button');
-    const name = document.getElementById('tag');
-    btn.onclick = () => SubmitScore.send(tag.value, currentScore).then(this.scene.start('SceneTopScores'));
-
     const currentScore = Storage.getCurrentScore();
     const lasthigh = Storage.getHighScore();
+    const btn = document.getElementById('button');
+    const tag = document.getElementById('tag');
+    btn.onclick = () => SubmitScore.send(tag.value, currentScore).then(this.scene.start('SceneTopScores'));
 
     this.score = this.add.text(this.game.config.width * 0.5, 128, ' ', {
       fontFamily: 'monospace',
@@ -90,3 +85,5 @@ export default class SceneScores extends Phaser.Scene {
     }
   }
 }
+
+export default SceneScores;
