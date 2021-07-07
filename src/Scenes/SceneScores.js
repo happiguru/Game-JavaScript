@@ -1,5 +1,7 @@
-import 'phaser';
-import config from '../Config/config.js';
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/* eslint-disable no-use-before-define */
+import Phaser from 'phaser';
 
 const SubmitScore = require('../modules/submitScore.js');
 const Storage = require('../modules/storage.js');

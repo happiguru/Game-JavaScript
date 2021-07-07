@@ -1,4 +1,7 @@
-import 'phaser';
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-use-before-define */
+import Phaser from 'phaser';
 import {
   Player,
   PlayerLaser,

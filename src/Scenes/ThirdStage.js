@@ -1,4 +1,7 @@
-import 'phaser';
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-use-before-define */
+import Phaser from 'phaser';
 import {
   Player,
   PlayerLaser,
@@ -7,6 +10,7 @@ import {
   CarrierShip,
 } from '../entities.js';
 import Background4 from '../assets/Background-4.png';
+
 const Storage = require('../modules/storage.js');
 
 let timer;

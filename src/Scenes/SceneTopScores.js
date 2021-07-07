@@ -1,5 +1,5 @@
-import 'phaser';
-import config from '../Config/config.js';
+/* eslint-disable no-nested-ternary */
+import Phaser from 'phaser';
 
 const GetScore = require('../modules/getScore.js');
 

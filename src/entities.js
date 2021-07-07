@@ -1,3 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-use-before-define */
+/* eslint-disable max-classes-per-file */
+import Phaser from 'phaser';
+
 let ammunition = 100;
 const Storage = require('./modules/storage.js');
 
@@ -13,10 +19,8 @@ export class Entity extends Phaser.GameObjects.Sprite {
 
   explode(canDestroy) {
     if (!this.getData('isDead')) {
-      // Set the texture to the explosion image, then play the animation
       this.setTexture('sprExplosion'); // this refers to the same animation key we used when we added this.anims.create previously
-      this.play('sprExplosion'); // play the animation
-      // pick a random explosion sound within the array we defined in this.sfx in SceneMain
+      this.play('sprExplosion');
       this.scene.sfx.explosions[Phaser.Math.Between(0,
         this.scene.sfx.explosions.length - 1)].play();
       if (this.shootTimer !== undefined) {
@@ -64,7 +68,7 @@ export class Player extends Entity {
   }
 
   onDestroy() {
-    this.scene.time.addEvent({ // go to game over scene
+    this.scene.time.addEvent({
       delay: 1000,
       callback() {
         this.scene.scene.start('SceneScores');
