@@ -25,6 +25,41 @@
 > A players score is recorded locally in the browser and compared to the previous scores.
 > If a player score beats the previous score, then they automatically become the highest on the LeadersBoard.
 
+## Game Design
+### Game Mechanics
+1. Shoot enemies to get points
+2. Beat your previous highest score
+3. Send you score to an online LeaderBoard
+
+### Targeted Platforms
+> To be played on a Web Browser only
+### Project Scope
+- To gather development resources
+- Does not incur any monetary cost
+- Should take approximately 5 -6 days from development to launch
+- Phaser 3 Developer License
+- To be deployed on Heroku platform
+### Assets needed
+- Player ship
+- Enemies ships
+- Expeditionary ships
+- Laser beams
+- Backgrounds
+
+#### Sounds
+- Laser beams
+- Imapact sound
+- Shoot sound
+- Explosion
+- Button clicks
+- Play button sound
+
+#### Code
+1. Phaser 3 game engine
+2. Webpack
+3. Html template page
+4. Jest testing platform
+5. JS Modules
 ## Game instructions:
 
 > Here you can find all the Game Instructions:
