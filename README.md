@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://phaserskyshooter.herokuapp.com/)
+[Live Demo Link](https://skyshooter.herokuapp.com/)
 ## Game Concept
 
 > Sky Shooter is the first game I have programmed. I picked my idea from simple Star wars game I use to watch my friends play when I was young. Little did I know that some day I will be a able to build a game for myself! 
