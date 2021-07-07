@@ -1,6 +1,6 @@
 const GetScore = (() => {
   async function all() {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/mFO8zw10kyIoLrMFk2KV/scores/', {
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ZUi2Xo2RRfSKd14twwPn/scores/', {
       method: 'GET',
       headers: {
         Accept: 'application/json',
