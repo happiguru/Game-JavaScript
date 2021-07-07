@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-use-before-define */
-/* eslint-disable no-unresolved */
 import Phaser from 'phaser';
 
 const SubmitScore = require('../modules/submitScore.js');
