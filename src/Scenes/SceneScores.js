@@ -3,8 +3,8 @@
 /* eslint-disable no-use-before-define */
 import Phaser from 'phaser';
 
-const SubmitScore = require('../modules/submitScore.js');
-const Storage = require('../modules/storage.js');
+const SubmitScore = require('../modules/submitScore');
+const Storage = require('../modules/storage');
 
 const zero = 0;
 

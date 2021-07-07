@@ -8,10 +8,10 @@ import {
   ChaserShip,
   GunShip,
   CarrierShip,
-} from '../entities.js';
+} from '../entities';
 import Background4 from '../assets/Background-4.png';
 
-const Storage = require('../modules/storage.js');
+const Storage = require('../modules/storage');
 
 let timer;
 let score = Storage.getCurrentScore();

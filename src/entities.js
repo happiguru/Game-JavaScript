@@ -6,7 +6,7 @@
 import Phaser from 'phaser';
 
 let ammunition = 100;
-const Storage = require('./modules/storage.js');
+const Storage = require('./modules/storage');
 
 export class Entity extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, key, type) {

@@ -2,14 +2,14 @@
 /* eslint-disable no-undef */
 
 import 'phaser';
-import config from './Config/config.js';
-import SceneMain from './Scenes/SceneMain.js';
-import SceneMainMenu from './Scenes/SceneMainMenu.js';
-import SceneScores from './Scenes/SceneScores.js';
-import SceneTopScores from './Scenes/SceneTopScores.js';
-import SecondStage from './Scenes/SecondStage.js';
-import ThirdStage from './Scenes/ThirdStage.js';
-import SceneIntro from './Scenes/SceneIntro.js';
+import config from './Config/config';
+import SceneMain from './Scenes/SceneMain';
+import SceneMainMenu from './Scenes/SceneMainMenu';
+import SceneScores from './Scenes/SceneScores';
+import SceneTopScores from './Scenes/SceneTopScores';
+import SecondStage from './Scenes/SecondStage';
+import ThirdStage from './Scenes/ThirdStage';
+import SceneIntro from './Scenes/SceneIntro';
 
 class Game extends Phaser.Game {
   constructor() {

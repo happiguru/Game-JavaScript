@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import Phaser from 'phaser';
 
-const GetScore = require('../modules/getScore.js');
+const GetScore = require('../modules/getScore');
 
 let allScores;
 

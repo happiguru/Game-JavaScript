@@ -23,7 +23,7 @@ import soundone from '../assets/sndExplode0.wav';
 import soundtwo from '../assets/sndExplode1.wav';
 import soundthree from '../assets/sndLaser.wav';
 
-const Storage = require('../modules/storage.js');
+const Storage = require('../modules/storage');
 
 let timer;
 let score = 0;
