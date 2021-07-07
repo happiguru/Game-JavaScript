@@ -1,4 +1,4 @@
-const Storage = require('../modules/storage.js');
+const Storage = require('../modules/storage');
 
 it('saves current score', () => {
   Storage.currentScore('0');
