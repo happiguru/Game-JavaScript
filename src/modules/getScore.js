@@ -8,6 +8,7 @@ const GetScore = (() => {
       },
     });
     const data = await response.json();
+
     return data;
   };
   return {
