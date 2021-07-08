@@ -1,12 +1,43 @@
 {
+  "name": "sky-shooter-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "start": "webpack serve --open --port=8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.10.4",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.29.0",
+    "babel-jest": "^26.1.0",
+    "canvas": "^2.1.0",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^26.1.0",
+    "phaser": "^3.3.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^3.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.42.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "jest-expect-subclass": "^1.0.1",
+    "phaser": "^3.3.0"
   }
 }
