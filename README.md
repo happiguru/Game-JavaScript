@@ -4,7 +4,8 @@
 
 ## Sky Shooter!
 
-> The goal of this project is to create a Javascript Shooter Game using Phaser 3, as specified in the Microverse Program.
+The goal of this project is to create a Javascript Shooter Game using Phaser 3, as specified in the Microverse Program.
+The "Sky Shooter Game" is a JavaScript-based implementation of a Phaser 3 game. It's a game for one person only. To win points and bullets, the player must shoot adversaries in the sky. The game ends when a player is shot by an enemy or when his or her bullets run out. The Leaderboard shows each player's score.
 
 ![screenshot](./g1.png)
 
