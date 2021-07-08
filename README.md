@@ -1,29 +1,30 @@
-## Game-JavaScript
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=happiguru/Game-JavaScript)
 
 
-# Sky Shooter!
+## Sky Shooter!
 
-> This projects consists of a Javascript Shooter Game built with Phaser 3, as aked for in the Microverse Program.
+> The goal of this project is to create a Javascript Shooter Game using Phaser 3, as specified in the Microverse Program.
 
 ![screenshot](./g1.png)
-![screenshot](./g2.png)
 
 ## Live Demo
 
 [Live Demo Link](https://skyshooter.herokuapp.com/)
+
 ## Game Concept
 
-> Sky Shooter is the first game I have programmed. I picked my idea from simple Star wars game I use to watch my friends play when I was young. Little did I know that some day I will be a able to build a game for myself! 
+> Sky Shooter is the first game I've ever designed. When I was little, I got my inspiration from a simple Star Wars game that I used to watch my buddies play. I had no idea that one day I would be able to create my own game!
 
 ## Main Objective
 
-> You have to shoot enemies to get more points and bullets.
-> When you destroy an enemy, you get rewarded with a point.
-> As a player, you can shoot down enemies using the keyboard "Spacebar".
-> Beat other players' highscores!
-> A players score is recorded locally in the browser and compared to the previous scores.
-> If a player score beats the previous score, then they automatically become the highest on the LeadersBoard.
+> To earn additional points and ammunition, you must shoot enemies. 
+> A point is awarded to you when you defeat an enemy. 
+> You can use the keyboard "Spacebar" to shoot down adversaries as a player. 
+> Beat the high scores of other players! The score of a player is saved locally in the browser and compared against prior results.
+> If a player's score exceeds the previous score, they are promoted to the top of the LeadersBoard.
+
+![screenshot](./g2.png)
 
 ## Game Design
 ### Game Mechanics
