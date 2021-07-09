@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "jest-expect-subclass": "^1.0.1",
+    "node-fetch": "^2.6.1",
     "phaser": "^3.3.0"
   }
 }

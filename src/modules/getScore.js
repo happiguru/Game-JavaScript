@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 const GetScore = (() => {
   const all = async () => {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ZUi2Xo2RRfSKd14twwPn/scores/', {
